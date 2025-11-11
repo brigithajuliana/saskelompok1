@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Favorite</title>
+    <style>
+        html { scroll-behavior: smooth; }
+        /* Optional: small offset for fixed headers */
+        .scroll-offset { scroll-margin-top: 80px; }
+    </style>
+</head>
+<body>
+
+<div id="foods">
+    <p class="scroll-offset"> bagian 1</p>
+
+</div>
+
+<div id="songs">
+    <p> bagian 2</p>
+</div>
+
+<div id="books">
+<h1> Ini Halaman My Favorite</h1>
+</div>
+<script>
+    // If page loaded with a hash, ensure element is focused/visible (fallback for older browsers)
+    window.addEventListener('load', function() {
+        if (location.hash) {
+            var el = document.querySelector(location.hash);
+            if (el) el.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+</script>
+</body>
+</html>
+
+
+
+  
